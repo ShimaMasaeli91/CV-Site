@@ -1,0 +1,1081 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+/* COLORS
+#0c8599
+#ae3ec9
+#212529
+#adb5bd
+
+
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  background-color: #000;
+  line-height: 1.5;
+}
+.container {
+  width: 90%;
+  margin: 10vh auto;
+  background-color: #212529;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.force-overflow {
+  min-height: 50px;
+}
+article {
+  padding: 16px 24px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+article::-webkit-scrollbar-track {
+  border: 1px solid #212529;
+  padding: 2px 0;
+  background-color: #212529;
+  border-radius: 5px;
+}
+/* The fourth rule customizes the style of the scrollbar itself, setting its width to 5 pixels. */
+article::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 5px;
+}
+/* The fifth rule defines the appearance of the scrollbar thumb, which is the draggable handle. It has a rounded shape and a lighter gray color with a border. */
+article::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #495057;
+  border: 1px solid #212529;
+  background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(73, 80, 87, 0.5) 50%,
+        transparent
+      )
+      padding-box,
+    linear-gradient(
+        to right,
+        transparent,
+        rgba(73, 80, 87, 0.5) 50%,
+        transparent
+      )
+      padding-box;
+  background-clip: padding-box;
+  border-radius: 10px;
+  border: 1px solid #212529;
+}
+article::-webkit-scrollbar-thumb:hover {
+  display: none;
+}
+article::-webkit-scrollbar-thumb:active {
+  display: unset;
+}
+.icon {
+  width: 30px;
+  height: 30px;
+  stroke: #ae3ec9;
+}
+.menu-nav {
+  display: flex;
+}
+menu {
+  width: 32px;
+  height: 32px;
+}
+menu .container-svg {
+  width: 32px;
+  height: 32px;
+  background-color: #ae3ec9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+menu .container-svg .icon {
+  width: 32px;
+  height: 32px;
+  stroke: #fff;
+  padding: 8px 8px;
+  cursor: pointer;
+}
+menu .container-svg .icon:hover {
+  width: 38px;
+  height: 38px;
+  transition: 0.2s ease-out;
+}
+.close-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 30px;
+  color: #ae3ec9;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+.hidden {
+  display: none;
+}
+.modal {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100vh;
+  background-color: #adb5bd;
+  padding: 20px 20px;
+  z-index: 10;
+  animation: slideIn 0.4s forwards;
+}
+@keyframes slideIn {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #adb5bd;
+  margin-top: 25px;
+  padding: 10px;
+  margin-bottom: 35px;
+  border-bottom: 2px solid #212529;
+}
+.search-field {
+  background-color: #adb5bd;
+  border: none;
+  flex: 1;
+  font-size: 14px;
+  color: #fff;
+}
+.search-field:focus {
+  width: 100%;
+  outline: none;
+}
+.search-field::placeholder {
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+}
+.search button svg {
+  width: 24px;
+  height: 24px;
+  stroke: #ae3ec9;
+}
+.search button {
+  background-color: #adb5bd;
+  border: 0;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.menu-area {
+  padding-top: 30px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #212529;
+}
+.menu-area ul {
+  list-style: none;
+}
+
+.menu-area ul li {
+  margin-bottom: 7px;
+}
+.menu-area ul li a {
+  text-decoration: none;
+  color: #212529;
+  display: block;
+}
+.menu-area ul li a:hover,
+.menu-area ul li:hover {
+  color: #fff;
+  transition: 700ms ease;
+}
+.dropdown-menu h3 {
+  margin-bottom: 10px;
+}
+.dropdown-menu ul {
+  display: none;
+}
+.dropdown-menu ul li {
+  font-weight: 400;
+  color: #fff;
+  animation: animate 1s ease;
+  font-size: 12px;
+}
+.dropdown-menu ul li a {
+  color: #212529;
+  font-size: 14px;
+}
+.dropdown-menu ul li:nth-child(5) a {
+  margin-bottom: 20px;
+}
+.dropdown-menu ul li a:hover {
+  color: #fff;
+}
+.dropdown-menu:hover ul {
+  display: block;
+}
+.dropdown-menu ul li:nth-child(1) {
+  animation: animate 500ms ease;
+}
+.dropdown-menu ul li:nth-child(2) {
+  animation: animate 900ms ease;
+}
+.dropdown-menu ul li:nth-child(3) {
+  animation: animate 1.1s ease;
+}
+.dropdown-menu ul li:nth-child(4) {
+  animation: animate 1.6s ease;
+}
+.dropdown-menu ul li:nth-child(5) {
+  animation: animate 2s ease;
+}
+/*The piece of code in the USER section defines a CSS animation using the `@keyframes` rule. 
+
+The `animate` keyframe animation starts at 0% of the animation duration and ends at 100%. 
+
+At the beginning of the animation (0%), the element is scaled to twice its size(`scale(2, 2)`) and rotated 90 degrees along the x-axis (`rotateX('90deg')`).
+
+At the end of the animation (100%), the element is scaled back to its original size (scale(1, 1)) and rotated back to 0 degrees along the x-axis (`rotateX('0deg')`).
+
+This animation can be applied to an element using the `animation-name` property with the value of `animate`.*/
+
+@keyframes animate {
+  0% {
+    transform: scale(2, 2) rotateX(90deg);
+  }
+  100% {
+    transform: scale(1, 1) rotateX(0deg);
+  }
+}
+.send-message {
+  color: #212529;
+  font-weight: 700;
+  font-size: 20px;
+}
+.send-message:hover {
+  color: #212529;
+}
+.send-message h3 {
+  margin-bottom: 15px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.name,
+.email,
+.textarea {
+  border: none;
+  border-bottom: 2px solid #212529;
+  padding: 10px;
+  background-color: #adb5bd;
+  color: #fff;
+}
+.name:focus,
+.email:focus,
+.textarea:focus {
+  outline: none;
+}
+.textarea {
+  height: 100px;
+}
+.name::placeholder,
+.email::placeholder,
+.textarea::placeholder {
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+}
+.btn--send {
+  border: none;
+  background-color: #ae3ec9;
+  color: #fff;
+  height: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+}
+nav {
+  width: 100%;
+}
+.jump .icon {
+  width: 24px;
+  height: 24px;
+}
+.jump:link,
+.jump:visited {
+  cursor: pointer;
+  text-decoration: none;
+}
+.jump:link .icon,
+.jump:visited .icon {
+  stroke: #adb5bd;
+}
+.jump:hover,
+.jump:active {
+  cursor: pointer;
+}
+.jump:hover .icon,
+.jump:active .icon {
+  stroke: #ae3ec9;
+}
+.anchors {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-left: 25%;
+  margin-top: 3px;
+}
+.download-resume {
+  width: 32px;
+  height: 32px;
+}
+#download-resume {
+  margin-left: auto;
+  margin-right: 7px;
+}
+.jump:link,
+.jump:visited {
+  cursor: pointer;
+  stroke: #ae3ec9;
+}
+.download-resume:hover,
+.download-resume:active {
+  cursor: pointer;
+}
+.hero-sec {
+  width: 30%;
+  height: 100%;
+  border-radius: 5px;
+  margin: 10px auto 10px;
+  background-image: linear-gradient(
+      to left,
+      rgba(174, 62, 201, 0.4),
+      rgba(12, 133, 153, 0.4)
+    ),
+    url(profile.jpg);
+  background-size: cover;
+  background-position: center;
+  display: block;
+}
+.hero-sec:after {
+  content: '';
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(173, 181, 189, 1) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  display: block;
+}
+.h1 {
+  display: none;
+}
+.linkedin-account:link,
+.linkedin-account:visited {
+  display: none;
+}
+.github-account:link,
+.github-account:visited {
+  display: none;
+}
+span {
+  color: #ae3ec9;
+  display: inline-block;
+  margin-bottom: 18px;
+}
+.title {
+  margin-top: 32px;
+}
+p {
+  margin-bottom: 48px;
+  color: #adb5bd;
+}
+section {
+  margin-bottom: 48px;
+}
+section:before {
+  content: '';
+  height: 1em;
+  height: 1px;
+  display: block;
+}
+section:after {
+  content: '';
+  height: 1px;
+  /* I've removed the vendor prefixes, if you are looking to support older browsers
+   then refer to older version of this answer.
+*/
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(173, 181, 189, 1) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.svg-h2 {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.h2 {
+  font-weight: 700;
+  font-size: 36px;
+  letter-spacing: 0.1px;
+  margin-bottom: 20px;
+  margin-top: 24px;
+}
+h3 {
+  font-size: 16px;
+  letter-spacing: 0.9px;
+}
+.progress-bar {
+  background-color: #000;
+  width: 1fr;
+  height: 5px;
+  border-radius: 5px;
+  margin-right: 15px;
+  margin-bottom: 24px;
+}
+.progress-bar div {
+  height: 5px;
+  width: 0%;
+  border-radius: 5px;
+  background-color: #ae3ec9;
+}
+.progress-bar div span {
+  font-size: 12px;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background-color: #000;
+  border: 1px solid #ae3ec9;
+  float: right;
+  margin-top: -15px;
+  margin-right: -20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.html {
+  background: #ae3ec9;
+  animation: html 1s linear forwards;
+}
+@keyframes html {
+  100% {
+    width: 66%;
+  }
+}
+.css {
+  background: #ae3ec9;
+  animation: css 1s linear forwards;
+}
+@keyframes css {
+  100% {
+    width: 60%;
+  }
+}
+.javascript {
+  animation: javascript 1s linear forwards;
+}
+@keyframes javascript {
+  100% {
+    width: 35%;
+  }
+}
+.git {
+  animation: git 1s linear forwards;
+}
+@keyframes git {
+  100% {
+    width: 24%;
+  }
+}
+.react {
+  animation: react 1s linear forwards;
+}
+@keyframes react {
+  100% {
+    width: 15%;
+  }
+}
+.typescript {
+  animation: typescript 1s linear forwards;
+}
+@keyframes typescript {
+  100% {
+    width: 15%;
+  }
+}
+.skill-bar {
+  margin-bottom: 64px;
+  margin-top: 64px;
+}
+.years {
+  margin-top: 32px;
+}
+.feature-title {
+  margin-bottom: 24px;
+}
+.options {
+  list-style: none;
+  margin-bottom: 32px;
+  color: #adb5bd;
+}
+.options-2:last-child {
+  margin-bottom: 64px;
+}
+.options-2 li:last-child {
+  color: #495057;
+}
+@media only screen and (min-width: 390px) {
+  .anchors {
+    padding-left: 27%;
+  }
+}
+@media only screen and (min-width: 420px) {
+  .anchors {
+    padding-left: 28.5%;
+  }
+}
+@media only screen and (min-width: 460px) {
+  .anchors {
+    padding-left: 30%;
+  }
+}
+@media only screen and (min-width: 460px) {
+  .anchors {
+    padding-left: 30%;
+  }
+}
+@media only screen and (min-width: 490px) {
+  .anchors {
+    padding-left: 31.5%;
+  }
+}
+@media only screen and (min-width: 520px) {
+  .anchors {
+    padding-left: 32.5%;
+  }
+}
+@media only screen and (min-width: 540px) {
+  .anchors {
+    padding-left: 33%;
+  }
+}
+@media only screen and (min-width: 560px) {
+  .anchors {
+    padding-left: 33.5%;
+  }
+}
+@media only screen and (min-width: 580px) {
+  .anchors {
+    padding-left: 34%;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .anchors {
+    padding-left: 34.5%;
+  }
+}
+@media only screen and (min-width: 620px) {
+  .anchors {
+    padding-left: 35%;
+  }
+}
+@media only screen and (min-width: 640px) {
+  .anchors {
+    padding-left: 35.5%;
+  }
+}
+@media only screen and (min-width: 660px) {
+  .anchors {
+    padding-left: 36%;
+  }
+}
+@media only screen and (min-width: 680px) {
+  .anchors {
+    padding-left: 36.5%;
+  }
+}
+@media only screen and (min-width: 700px) {
+  .anchors {
+    padding-left: 37%;
+  }
+}
+@media only screen and (min-width: 720px) {
+  .anchors {
+    padding-left: 37.5%;
+  }
+}
+@media only screen and (min-width: 740px) {
+  .anchors {
+    padding-left: 38%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    height: 90vh;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+  }
+  article {
+    padding-left: 32px;
+    padding-right: 16px;
+    height: 90vh;
+  }
+  .icon {
+    width: 30px;
+    height: 30px;
+    stroke: #ae3ec9;
+  }
+  .menu-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  menu {
+    width: 81px;
+    height: 81px;
+    margin-bottom: auto;
+  }
+  menu .container-svg {
+    width: 81px;
+    height: 81px;
+    border-top-left-radius: 5px;
+  }
+  menu .container-svg .icon {
+    width: 50px;
+    height: 50px;
+  }
+  menu .container-svg .icon:hover {
+    width: 60px;
+    height: 60px;
+  }
+  .modal {
+    width: 40%;
+    padding: 30px;
+  }
+  .menu-area {
+    font-size: 20px;
+    line-height: 2;
+  }
+  .menu-area ul li {
+    margin-bottom: 10px;
+  }
+  .dropdown-menu ul li {
+    font-size: 16px;
+  }
+  .send-message h3 {
+    margin-bottom: 20px;
+  }
+  .jump .icon {
+    width: 30px;
+    height: 30px;
+  }
+  .anchors {
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 0;
+    padding-left: 0;
+    margin-bottom: auto;
+    height: 95%;
+    margin-top: 0;
+  }
+  .download-resume {
+    width: 60px;
+    height: 60px;
+    margin-top: 25vh;
+  }
+  .hero-sec {
+    width: 500%;
+    transform: scale(1.05);
+    margin-top: 0;
+    margin-left: 10px;
+    height: 100vh;
+    background-image: linear-gradient(
+        to left,
+        rgba(174, 62, 201, 0.4),
+        rgba(12, 133, 153, 0.4)
+      ),
+      url(profile.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 20px -10px rgba(174, 62, 201, 0.4),
+      0 0 20px -10px rgba(12, 133, 153, 0.4);
+    border-radius: 5px;
+  }
+  .h1-container {
+    display: inline;
+    position: absolute;
+    left: 30%;
+    top: 85%;
+    transform: translate(-30px, 0);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 10px;
+    align-content: center;
+    justify-content: center;
+  }
+  .h1 {
+    display: inline;
+    grid-column: 1 / -1;
+    font-size: 24px;
+  }
+  .linkedin-account:link,
+  .linkedin-account:visited {
+    display: inline;
+    grid-row: 2;
+    grid-column: 1 / 2;
+    justify-self: end;
+  }
+  .linkedin-account:hover,
+  .linkedin-account:active {
+    cursor: pointer;
+  }
+  .linkedin-account:link .icon-linkedin,
+  .linkedin-account:visited .icon-linkedin {
+    width: 16px;
+    height: 16px;
+    fill: #ffffff90;
+  }
+  .linkedin-account:hover .icon-linkedin,
+  .linkedin-account:active .icon-linkedin {
+    fill: #fff;
+  }
+
+  .github-account:link,
+  .github-account:visited {
+    display: inline;
+    grid-row: 2;
+    grid-column: 2 / 3;
+    justify-self: start;
+  }
+  .github-account:hover,
+  .github-account:active {
+    cursor: pointer;
+  }
+  .github-account:link .icon-github,
+  .github-account:visited .icon-github {
+    width: 16px;
+    height: 16px;
+    fill: #ffffff90;
+  }
+  .github-account:hover .icon-github,
+  .github-account:active .icon-github {
+    fill: #fff;
+  }
+  .second-container {
+    height: 90vh;
+  }
+  .second-container:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+    background-image: linear-gradient(
+      to top,
+      rgb(33, 37, 41, 0),
+      rgb(33, 37, 41, 0.99) 90%
+    );
+    width: 50%;
+    height: 4em;
+  }
+  .second-container:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    background-image: linear-gradient(
+      to bottom,
+      rgb(33, 37, 41, 0),
+      rgb(33, 37, 41, 0.99) 90%
+    );
+    width: 50%;
+    height: 4em;
+  }
+  .h2 {
+    font-size: 44px;
+    letter-spacing: 0.5px;
+  }
+  h3 {
+    margin-bottom: 24px;
+  }
+  .second-container:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+    background-image: linear-gradient(
+      to top,
+      rgb(33, 37, 41, 0),
+      rgb(33, 37, 41, 0.99) 90%
+    );
+    width: 50%;
+    height: 4em;
+  }
+}
+@media only screen and (min-width: 810px) {
+  .second-container:before {
+    width: 47.9%;
+  }
+  .second-container:after {
+    width: 47.9%;
+  }
+}
+@media only screen and (min-width: 910px) {
+  .second-container:before {
+    width: 45.9%;
+  }
+  .second-container:after {
+    width: 45.9%;
+  }
+}
+@media only screen and (min-width: 930px) {
+  .second-container:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+    background-image: linear-gradient(
+      to top,
+      rgb(33, 37, 41, 0),
+      rgb(33, 37, 41, 0.99) 90%
+    );
+    width: 45.9%;
+    height: 4em;
+  }
+  .second-container:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    background-image: linear-gradient(
+      to bottom,
+      rgb(33, 37, 41, 0),
+      rgb(33, 37, 41, 0.99) 90%
+    );
+    width: 45.9%;
+    height: 4em;
+  }
+}
+@media only screen and (min-width: 970px) {
+  .second-container:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+    background-image: linear-gradient(
+      to top,
+      rgb(33, 37, 41, 0),
+      rgb(33, 37, 41, 0.99) 90%
+    );
+    width: 45.9%;
+    height: 4em;
+  }
+  .second-container:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    background-image: linear-gradient(
+      to bottom,
+      rgb(33, 37, 41, 0),
+      rgb(33, 37, 41, 0.99) 90%
+    );
+    width: 45.9%;
+    height: 4em;
+  }
+}
+@media only screen and (min-width: 990px) {
+  .second-container:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+    background-image: linear-gradient(
+      to top,
+      rgb(33, 37, 41, 0),
+      rgb(33, 37, 41, 0.99) 90%
+    );
+    width: 45.9%;
+    height: 4em;
+  }
+  .second-container:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    bottom: 50px;
+    right: 50px;
+    pointer-events: none;
+    background-image: linear-gradient(
+      to bottom,
+      rgb(33, 37, 41, 0),
+      rgb(33, 37, 41, 0.99) 90%
+    );
+    width: 45.9%;
+    height: 4em;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .container {
+    width: 1100px;
+    margin: 5vh auto;
+    height: 90vh;
+    display: flex;
+    position: relative;
+    border-radius: 5px;
+  }
+  article {
+    padding-left: 64px;
+    padding-right: 16px;
+  }
+  .search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #adb5bd;
+    margin-top: 25px;
+    padding: 10px;
+    margin-bottom: 35px;
+    border-bottom: 2px solid #212529;
+  }
+  .search-field {
+    background-color: #adb5bd;
+    border: none;
+    flex: 1;
+    font-size: 14px;
+    color: #fff;
+  }
+  .search-field:focus {
+    width: 100%;
+    outline: none;
+  }
+  .search-field::placeholder {
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+  }
+  .search button svg {
+    width: 24px;
+    height: 24px;
+    stroke: #ae3ec9;
+  }
+  .search button {
+    background-color: #adb5bd;
+    border: 0;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  .jump .icon {
+    width: 36px;
+    height: 36px;
+  }
+  .anchors {
+    margin-top: 0 !important;
+  }
+  .hero-sec {
+    width: 200%;
+    display: inline;
+    height: 100%;
+  }
+  .second-container:before {
+    top: 0;
+    right: 0;
+    width: 60%;
+  }
+  .second-container:after {
+    bottom: 0;
+    right: 0;
+    width: 60%;
+  }
+  .h2 {
+    font-weight: 700;
+    font-size: 52px;
+    letter-spacing: 0.7px;
+    margin-bottom: 48px;
+    margin-top: 32px;
+  }
+  h3 {
+    font-size: 16px;
+    letter-spacing: 0.9px;
+    margin-bottom: 14px;
+  }
+  .price {
+    margin-bottom: 18px;
+  }
+}

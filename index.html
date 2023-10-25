@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="modal hidden" id="modal">
+      <button class="close-modal">&#x2717;</button>
+      <!-- <form id= "searchform" class="search" action="">
+        <input class="search-field" type="text" placeholder="Search...">
+        <button type="submit">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none"     viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon icon-search">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+          </svg>
+        </button>
+        </input>
+      </form>
+      <div class="search-results"></div> -->
+      <div div class="menu-area">
+        <ul>
+          <li>
+            <h3><a id="modal-projects" href="#section-4">Projects</a></h3>
+          </li>
+          <li>
+            <h3>
+              <a
+                href="CV-Shima-Masaeli.pdf"
+                target="_blank"
+                download="CV-Shima-Masaeli"
+                >Resume</a
+              >
+            </h3>
+          </li>
+          <li class="dropdown-menu">
+            <h3>Contact Me</h3>
+
+            <ul>
+              <li>
+                <a href="#"
+                  >Address: Iran, Tehran, Simon Blv., Eghbalpour St.</a
+                >
+              </li>
+              <li><a href="#">Mobile: +98-9380736507</a></li>
+              <li><a href="#">Gmail: shimamasaeli91@gmail.com</a></li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/shima-masaeli"
+                  target="_blank"
+                  >LinkedIn</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/ShimaMasaeli91" target="_blank"
+                  >GitHub</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="send-message">
+            <h3>Send Message</h3>
+            <form
+              class="form"
+              action="https://formsubmit.co/shimamasaeli91@gmail.com"
+              method="POST"
+            >
+              <input
+                class="name"
+                type="text"
+                name="Name"
+                placeholder="Full Name"
+                required
+              />
+              <input
+                class="email"
+                type="email"
+                name="Email"
+                placeholder="Email"
+                required
+              />
+              <textarea
+                class="textarea"
+                name="Message"
+                placeholder="Message"
+                required
+              ></textarea>
+              <button class="btn--send">Send Message</button>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
+    <div class="container">
+      <div class="menu-nav">
+        <menu>
+          <div class="container-svg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="icon menu-icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </div>
+        </menu>
+        <nav>
+          <div class="anchors">
+            <a class="jump" href="#section-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                />
+              </svg>
+            </a>
+
+            <a class="jump" href="#section-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"
+                />
+              </svg>
+            </a>
+
+            <a class="jump" href="#section-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"
+                />
+              </svg>
+            </a>
+
+            <a class="jump" href="#section-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75"
+                />
+              </svg>
+            </a>
+
+            <a class="jump" href="#section-5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </a>
+            <a
+              id="download-resume"
+              href="CV-Shima-Masaeli.pdf"
+              target="_blank"
+              download="CV-Shima-Masaeli"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon download-resume"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 9.75v6.75m0 0l-3-3m3 3l3-3m-8.25 6a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z"
+                />
+              </svg>
+            </a>
+          </div>
+        </nav>
+      </div>
+      <div class="hero-sec">
+        <div class="h1-container">
+          <h1 class="h1">Shima Masaeli</h1>
+          <a
+            href="https://www.linkedin.com/in/shima-masaeli"
+            target="_blank"
+            class="linkedin-account"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              class="icon icon-linkedin"
+            >
+              <!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
+              <path
+                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://github.com/ShimaMasaeli91"
+            target="_blank"
+            class="github-account"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              class="icon icon-github"
+            >
+              <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M80 104a24 24 0 1 0 0-48 24 24 0 1 0 0 48zm80-24c0 32.8-19.7 61-48 73.3v87.8c18.8-10.9 40.7-17.1 64-17.1h96c35.3 0 64-28.7 64-64v-6.7C307.7 141 288 112.8 288 80c0-44.2 35.8-80 80-80s80 35.8 80 80c0 32.8-19.7 61-48 73.3V160c0 70.7-57.3 128-128 128H176c-35.3 0-64 28.7-64 64v6.7c28.3 12.3 48 40.5 48 73.3c0 44.2-35.8 80-80 80s-80-35.8-80-80c0-32.8 19.7-61 48-73.3V352 153.3C19.7 141 0 112.8 0 80C0 35.8 35.8 0 80 0s80 35.8 80 80zm232 0a24 24 0 1 0 -48 0 24 24 0 1 0 48 0zM80 456a24 24 0 1 0 0-48 24 24 0 1 0 0 48z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <article>
+        <div class="second-container">
+          <section id="section-1" class="about-me">
+            <h2 class="h2">about me</h2>
+            <span><em>32 years / Married / Junior</em></span>
+            <p>
+              Hello! My name is Shima. I am a 32-year-old podcaster who is
+              passionate about web development world. I am currently learning
+              React and JavaScript and have built a personal CV website and a
+              shopping website to practice. I am eager to learn more about
+              front-end frameworks and my goal is to become an experienced
+              front-end developer in the next 5 years. I'm also interested in
+              React Native and the applications of AI in web development. I am a
+              diligent person with proficient English skills and I'm confident
+              in my ability to learn new things. So, I am looking for a mentor
+              who can help me learn and grow faster.
+            </p>
+          </section>
+          <section id="section-2" class="skills">
+            <div class="svg-h2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"
+                />
+              </svg>
+              <h2>skills</h2>
+            </div>
+            <div class="skill-bar">
+              <h3><strong>HTML</strong></h3>
+              <div class="progress-bar">
+                <div class="html"><span>66%</span></div>
+              </div>
+              <h3><strong>CSS</strong></h3>
+              <div class="progress-bar">
+                <div class="css"><span>60%</span></div>
+              </div>
+              <h3><strong>JavaScript</strong></h3>
+              <div class="progress-bar">
+                <div class="javascript"><span>35%</span></div>
+              </div>
+              <h3><strong>Git</strong></h3>
+              <div class="progress-bar">
+                <div class="git"><span>24%</span></div>
+              </div>
+              <h3><strong>React</strong></h3>
+              <div class="progress-bar">
+                <div class="react"><span>15%</span></div>
+              </div>
+              <!-- <h3><strong>TypeScript</strong></h3>
+              <div class="progress-bar">
+                <div class="typescript"><span>15%</span></div>
+              </div> -->
+            </div>
+          </section>
+          <section id="section-3" class="education">
+            <div class="svg-h2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"
+                />
+              </svg>
+              <h2>education</h2>
+            </div>
+            <div class="feature-box">
+              <span class="years">2014-2017</span>
+              <p class="feature-title"><strong>MBA</strong></p>
+              <span>Semnan University</span>
+              <p class="feature-text">
+                Master of Business Administration with concentration on
+                Technology Management
+              </p>
+              <span class="years">2009-2014</span>
+              <p class="feature-title"><strong>Physics</strong></p>
+              <span>Iran University of Science and Technology</span>
+              <p class="feature-text">Bachelor of Science in Applied Physics</p>
+            </div>
+          </section>
+          <section id="section-4" class="experience">
+            <div class="svg-h2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75"
+                />
+              </svg>
+
+              <h2>projects</h2>
+            </div>
+            <div class="feature-box">
+              <span class="years">2023</span>
+              <p class="feature-title">
+                <strong>My personal CV website</strong>
+              </p>
+              <p class="feature-text">
+                A responsive webpage to practice what I've learned in HTML, CSS,
+                and JavaScript. Here, I learned to build hidden modal windows,
+                and functional messaging forms.
+              </p>
+            </div>
+            <div class="feature-box">
+              <span class="years">2023</span>
+              <p class="feature-title">
+                <strong>A Book Shopping website</strong>
+              </p>
+              <p class="feature-text">
+                Another responsive website to continue practicing some new
+                techniques like how to build a mock-API, how to retrieve data
+                from database file and show it on the front side of the web, or
+                how to build functional filter and search bars. Meanwhile,I got
+                familiar with what SQL is, what it is used for, and some of it's
+                necessary syntax. I also designed a landing page with a
+                functional star rating box. To complete it, I need to learn how
+                JavaScript can be used for infinite loading on scroll, and
+                authentication. So, here I improved my JavaScript skill to the
+                next level.
+              </p>
+            </div>
+            <!-- <div class="feature-box">
+              <span class="years">2014 - 2016</span>
+              <p class="feature-title">
+                <strong>apple inc., senior web developer</strong>
+              </p>
+              <p class="feature-text">
+                Developed and delivered high-end website solutions to a diverse
+                client base by utilizing wide-ranging technologies and
+                frameworks.
+              </p>
+            </div>
+            <div class="feature-box">
+              <span class="years">2013 - 2014</span>
+              <p class="feature-title">
+                <strong>google, full-stack web development</strong>
+              </p>
+              <p class="feature-text">
+                Facilitating cutting-edge engineering solutions with a wide
+                range of e-commerce application and technology skills.
+              </p>
+            </div> -->
+          </section>
+
+          <section id="section-5" class="pricing-col">
+            <div class="svg-h2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+
+              <h2>my pricing</h2>
+            </div>
+            <div class="price-list">
+              <span class="title"><strong>Internship</strong></span>
+              <p class="price">&#36; 1000/month</p>
+              <ul class="options options-1">
+                <li>full-time</li>
+                <li>remote</li>
+                <li>need mentorship</li>
+              </ul>
+            </div>
+            <div class="price-list">
+              <span class="title"><strong>Junior</strong></span>
+              <p class="price">&#36; 2000/month</p>
+              <ul class="options options-2">
+                <li>full-time</li>
+                <li>remote</li>
+                <li>need mentorship</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>

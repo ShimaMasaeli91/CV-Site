@@ -508,7 +508,7 @@ h3 {
 }
 @keyframes html {
   100% {
-    width: 66%;
+    width: 86%;
   }
 }
 .css {
@@ -517,7 +517,7 @@ h3 {
 }
 @keyframes css {
   100% {
-    width: 60%;
+    width: 70%;
   }
 }
 .javascript {
@@ -525,7 +525,7 @@ h3 {
 }
 @keyframes javascript {
   100% {
-    width: 35%;
+    width: 75%;
   }
 }
 .git {
@@ -533,7 +533,7 @@ h3 {
 }
 @keyframes git {
   100% {
-    width: 24%;
+    width: 64%;
   }
 }
 .react {
@@ -541,7 +541,7 @@ h3 {
 }
 @keyframes react {
   100% {
-    width: 15%;
+    width: 90%;
   }
 }
 .typescript {

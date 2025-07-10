@@ -525,7 +525,7 @@ h3 {
 }
 @keyframes javascript {
   100% {
-    width: 75%;
+    width: 85%;
   }
 }
 .git {
@@ -549,7 +549,7 @@ h3 {
 }
 @keyframes typescript {
   100% {
-    width: 15%;
+    width: 90%;
   }
 }
 .skill-bar {

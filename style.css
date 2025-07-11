@@ -1147,25 +1147,32 @@ h3 {
 .download-resume-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  background-color: #ae3ec9;
+  background-color: #0c8599;
   color: #fff;
-  padding: 8px 16px;
-  border-radius: 4px;
+  padding: 12px 24px;
+  border-radius: 6px;
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  margin-top: 10px;
-  transition: background-color 0.3s ease;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 300px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(12, 133, 153, 0.3);
 }
 
 .download-resume-btn:hover {
-  background-color: #8b2fa3;
+  background-color: #0a6b7a;
   color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(12, 133, 153, 0.4);
 }
 
 .download-resume-btn .icon {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   stroke: #fff;
 }

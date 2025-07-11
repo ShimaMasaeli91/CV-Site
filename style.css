@@ -383,7 +383,7 @@ nav {
   cursor: pointer;
 }
 .hero-sec {
-  width: 30%;
+  width: 35%;
   height: 100%;
   border-radius: 5px;
   margin: 10px auto 10px;
@@ -508,7 +508,7 @@ h3 {
 }
 @keyframes html {
   100% {
-    width: 86%;
+    width: 85%;
   }
 }
 .css {
@@ -533,7 +533,7 @@ h3 {
 }
 @keyframes git {
   100% {
-    width: 64%;
+    width: 65%;
   }
 }
 .react {
@@ -549,7 +549,7 @@ h3 {
 }
 @keyframes typescript {
   100% {
-    width: 90%;
+    width: 85%;
   }
 }
 .skill-bar {

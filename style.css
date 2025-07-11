@@ -383,7 +383,7 @@ nav {
   cursor: pointer;
 }
 .hero-sec {
-  width: 33.33%;
+  width: 30%;
   height: 100%;
   border-radius: 5px;
   margin: 10px auto 10px;
@@ -739,7 +739,7 @@ h3 {
     margin-top: 25vh;
   }
   .hero-sec {
-    width: 33.33%;
+    width: 500%;
     transform: scale(1.05);
     margin-top: 0;
     margin-left: 10px;
@@ -1049,7 +1049,7 @@ h3 {
     margin-top: 0 !important;
   }
   .hero-sec {
-    width: 33.33%;
+    width: 200%;
     display: inline;
     height: 100%;
   }

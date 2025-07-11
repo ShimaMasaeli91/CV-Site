@@ -22,10 +22,7 @@ FONT SIZE SYSTEM (px)
 }
 html,
 body {
-  height: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  background-color: #000;
 }
 
 body {

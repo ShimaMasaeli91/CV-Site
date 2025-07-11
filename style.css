@@ -1214,3 +1214,17 @@ h3 {
   margin: 0 !important;
   padding: 0 !important;
 }
+
+/* FORCE remove all lines under contact-item in contact section */
+.contact .contact-info .contact-item,
+.contact .contact-info .contact-item::after,
+.contact .contact-info .contact-item::before {
+  border-bottom: none !important;
+  box-shadow: none !important;
+  background: none !important;
+  content: none !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+}

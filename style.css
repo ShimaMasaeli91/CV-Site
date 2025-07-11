@@ -1199,8 +1199,13 @@ h3 {
   border-bottom: none !important;
 }
 
+/* Remove all dividers/lines under contact-item elements in the contact section only */
+.contact .contact-info .contact-item {
+  border-bottom: none !important;
+}
+
 /* Also hide any pseudo-element line if present */
-.contact .contact-info .contact-item:first-child:after {
+.contact .contact-info .contact-item:after {
   display: none !important;
   content: none !important;
   border: none !important;

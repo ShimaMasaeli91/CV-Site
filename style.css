@@ -1113,13 +1113,13 @@ h3 {
 }
 
 .contact-item a {
-  color: #0c8599;
+  color: #ffffff90;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .contact-item a:hover {
-  color: #ae3ec9;
+  color: #fff;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1141,4 +1141,31 @@ h3 {
   .contact-info {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+/* Download resume button in contact section */
+.download-resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ae3ec9;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.download-resume-btn:hover {
+  background-color: #8b2fa3;
+  color: #fff;
+}
+
+.download-resume-btn .icon {
+  width: 16px;
+  height: 16px;
+  stroke: #fff;
 }

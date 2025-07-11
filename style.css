@@ -1177,3 +1177,14 @@ h3 {
   margin-right: 10px;
   vertical-align: middle;
 }
+
+/* Hide the divider below the contact-info grid in the contact section only */
+.contact .contact-info:after {
+  display: none !important;
+  content: none !important;
+  border: none !important;
+  background: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}

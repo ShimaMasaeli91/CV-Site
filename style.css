@@ -27,10 +27,12 @@ body {
 
 body {
   flex: 1 0 auto;
+  color: #fff;
 }
 
 .container {
   flex: 1 0 auto;
+  color: #fff;
   width: 90%;
   margin: 10vh auto 0 auto;
   background-color: #212529;
